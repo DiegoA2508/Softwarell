@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="869.0" prefWidth="1243.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moduloSeguridad.Controller.RecuperarContraseñaController">
+   <children>
+      <Pane layoutX="590.0" prefHeight="869.0" prefWidth="653.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="180.0" layoutY="319.0" prefHeight="31.0" prefWidth="321.0" text="¿Tienes problemas para iniciar sesión?" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="correoRecuperaciontxt" layoutX="108.0" layoutY="435.0" prefHeight="31.0" prefWidth="467.0" />
+            <Button fx:id="enviarbtn" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="CENTER" depthTest="ENABLE" layoutX="275.0" layoutY="482.0" mnemonicParsing="false" onAction="#enviar" prefHeight="31.0" prefWidth="131.0" style="-fx-background-radius: 20; -fx-background-color: #32a3a7;" text="Enviar" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect></Button>
+            <BorderPane layoutX="466.0" layoutY="688.0" prefHeight="167.0" prefWidth="162.0">
+               <center>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../imagenes/logo-camu.png" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <BorderPane layoutX="246.0" layoutY="170.0" prefHeight="149.0" prefWidth="190.0">
+               <center>
+                  <ImageView fitHeight="118.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../imagenes/Captura%20de%20pantalla%202023-03-25%20203537.png" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <Label alignment="CENTER" layoutX="107.0" layoutY="350.0" opacity="0.5" prefHeight="31.0" prefWidth="467.0" text="Ingresa tu correo electrónico y te enviaremos un enlace" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="143.0" layoutY="369.0" opacity="0.5" prefHeight="31.0" prefWidth="397.0" text="para que recuperes el acceso a tu cuenta." textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="registro" alignment="CENTER" layoutX="272.0" layoutY="562.0" onAction="#registro" text="Crear cuenta nueva" />
+            <Separator layoutX="31.0" layoutY="546.0" prefHeight="3.0" prefWidth="299.0" />
+            <Separator layoutX="356.0" layoutY="546.0" prefHeight="3.0" prefWidth="277.0" />
+            <Label layoutX="335.0" layoutY="536.0" text="O" />
+            <Button fx:id="volverbtn" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="CENTER" depthTest="ENABLE" layoutX="43.0" layoutY="753.0" mnemonicParsing="false" onAction="#volver" prefHeight="31.0" prefWidth="131.0" style="-fx-background-radius: 20; -fx-background-color: #32a3a7;" text="Volver" textAlignment="CENTER">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <BorderPane layoutX="-2.0" prefHeight="869.0" prefWidth="593.0" style="-fx-background-color: #247378;">
+         <center>
+            <ImageView fitHeight="277.0" fitWidth="529.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../imagenes/logo-camu-sticky-retina.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

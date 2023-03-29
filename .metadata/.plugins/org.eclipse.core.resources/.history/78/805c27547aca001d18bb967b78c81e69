@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="869.0" prefWidth="1243.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="591.0" layoutY="-1.0" prefHeight="869.0" prefWidth="653.0" style="-fx-background-color: DEDEDE;">
+         <children>
+            <Label alignment="CENTER" layoutX="154.0" layoutY="105.0" prefHeight="117.0" prefWidth="372.0" text="Bienvenido" textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri Bold" size="76.0" />
+               </font>
+            </Label>
+            <Label layoutX="107.0" layoutY="339.0" prefHeight="31.0" prefWidth="220.0" text="Usuario" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usuariotxt" layoutX="107.0" layoutY="370.0" prefHeight="31.0" prefWidth="467.0" />
+            <Label layoutX="107.0" layoutY="410.0" prefHeight="31.0" prefWidth="220.0" text="Contraseña" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="contraseñatxt" layoutX="107.0" layoutY="441.0" prefHeight="31.0" prefWidth="467.0" />
+            <Button fx:id="iniciarSesionbtn" layoutX="287.0" layoutY="489.0" mnemonicParsing="false" onAction="#iniciarSesion" style="-fx-background-radius: 20;" text="Iniciar Sesion" />
+            <Hyperlink fx:id="contraseñaPerdida" layoutX="265.0" layoutY="536.0" onAction="#recuperarContraseña" text="¿Perdiste tu contraseña?">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="registro" layoutX="249.0" layoutY="555.0" onAction="#registro" text="¿No tienes cuenta?, Registrate">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+      <BorderPane layoutX="-2.0" prefHeight="869.0" prefWidth="593.0" style="-fx-background-color: black;">
+         <center>
+            <ImageView fitHeight="277.0" fitWidth="529.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../../../../Downloads/logo-camu-sticky-retina.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

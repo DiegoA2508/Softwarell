@@ -1,0 +1,10 @@
+package moduloSeguridad.Controller;
+
+public class UsuarioController {
+
+	public void setAplication(Aplicacion aplicacion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

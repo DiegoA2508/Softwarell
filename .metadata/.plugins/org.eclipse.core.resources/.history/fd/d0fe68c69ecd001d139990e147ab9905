@@ -1,0 +1,115 @@
+package co.edu.uniquindio.estructurasDatos.storify.controllers;
+
+import java.net.URL;
+import java.util.Iterator;
+import java.util.ResourceBundle;
+
+import javax.swing.JOptionPane;
+
+import co.edu.uniquindio.estructurasDatos.storify.model.Administrador;
+import co.edu.uniquindio.estructurasDatos.storify.model.Storify;
+import co.edu.uniquindio.estructurasDatos.storify.principal.Aplicacion;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
+
+public class LoginController {
+
+
+	private Aplicacion aplicacion=new Aplicacion();
+	private Administrador admin = new Administrador();
+	private Storify storify=new Storify();
+
+	@FXML
+	private ComboBox<String> comboBoxRol=new ComboBox<String>();
+
+	ObservableList<String> roles = FXCollections.observableArrayList();
+
+    @FXML
+    private TextField txtFieldUsuario;
+
+    @FXML
+    private TextField txtFieldContraseña;
+
+    @FXML
+    private Button btnIngresar;
+
+    @FXML
+    private Text txtRegistrarse;
+
+
+    //Carga en el comboBox las dos opciones
+    public void initialize() {
+    	roles.add("Administrador");
+    	roles.add("Usuario");
+    	comboBoxRol.setItems(roles);
+
+    }
+
+
+    @FXML
+    void Registrarse(MouseEvent event) {
+    	aplicacion.mostrarRegistro();
+    }
+
+
+
+
+    @FXML
+    void ingresarLog(MouseEvent event) {
+
+    	//Valida que los campos no estén vacíos
+    	if (!txtFieldUsuario.getText().isEmpty()&&comboBoxRol.getSelectionModel().getSelectedItem()!=null) {
+    		//Valida la información para ingresar el Administrador
+    		if (comboBoxRol.getSelectionModel().getSelectedItem().equals("Administrador")&&txtFieldUsuario.getText().equals("admin")&&txtFieldContraseña.getText().equals("admin123")) {
+//Activar para validar el admin bien
+//    	if (comboBoxRol.getSelectionModel().getSelectedItem().equals("Administrador")&&txtFieldUsuario.getText().equals(admin.getUsuario())&&txtFieldContraseña.getText().equals(admin.getContraseña())) {
+
+        		JOptionPane.showMessageDialog(null, "BIENVENIDO ADMINISTRADOR");
+        		aplicacion.mostrarPrincipal();
+
+    		}else{
+    			if (comboBoxRol.getSelectionModel().getSelectedItem().equals("Usuario")&&txtFieldUsuario.getText().equals("user")&&txtFieldContraseña.getText().equals("user123")) {
+    				JOptionPane.showMessageDialog(null, "BIENVENIDO USUARIO");
+    				aplicacion.mostrarVentanaUsuario();
+    			}else{
+    				JOptionPane.showMessageDialog(null, "ERROR, USUARIO NO RECONOCIDO");
+    			}
+    		}
+    	}else{
+    		JOptionPane.showMessageDialog(null, "CAMPOS VACÍOS");
+    	}
+
+    	//Limpio los espacios
+    	txtFieldUsuario.clear();
+    	txtFieldContraseña.clear();
+    }
+
+
+    //Método que valida si el usuario ingresado en txtField es un usuario existente en lista
+    //Si existe retorna true y llama a un nuevo método que recibe por parametro ese usuario y verifica
+    //si el valor ingresado en el textField es el valor de ese usuario
+    public boolean validarUsuario(){
+
+    	Iterator list=storify.getListaUsuarios().entrySet().iterator();
+    	while (list.hasNext()) {
+
+
+		}
+//    	if (txtFieldUsuario.getText().equals()) {
+//
+//		}
+		return false;
+    }
+
+	public void setAplicacion(Aplicacion aplicacion) {
+		this.aplicacion=aplicacion;
+	}
+
+
+
+}

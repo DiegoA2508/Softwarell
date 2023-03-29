@@ -1,0 +1,10 @@
+package moduloSeguridad.Model;
+
+public class Usuario {
+	
+	private String nombre;
+	private String numeroDocumento;
+	private String contraseña;
+	private String 
+
+}

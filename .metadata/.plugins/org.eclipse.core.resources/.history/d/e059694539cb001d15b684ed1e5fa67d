@@ -1,0 +1,11 @@
+package moduloSeguridad.Controller;
+
+import co.edu.uniquindio.estructurasDatos.storify.model.Administrador;
+import co.edu.uniquindio.estructurasDatos.storify.principal.Aplicacion;
+
+public class LoginController {
+	
+	private Aplicacion aplicacion=new Aplicacion();
+	private Administrador admin = new Administrador();
+
+}

@@ -1,0 +1,44 @@
+package moduloSeguridad;
+
+import co.edu.uniquindio.estructurasDatos.storify.controllers.LoginController;
+import co.edu.uniquindio.estructurasDatos.storify.controllers.UsuarioController;
+import co.edu.uniquindio.estructurasDatos.storify.principal.Aplicacion;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+public class Aplicacion {
+
+	private Stage primaryStage=new Stage();
+	private AnchorPane anchorPane;
+	LoginController logControl;
+	
+	public  void start(Stage primaryStage) throws Exception {
+
+		this.primaryStage = primaryStage;
+		this.primaryStage.setTitle("STORIFY");
+
+		mostrarVentanaLogin();
+
+
+	}
+	
+	public void mostrarVentanaLogin() {
+		try {
+			primaryStage.close();
+			FXMLLoader loader1 = new FXMLLoader(Aplicacion.class.getResource("view/Login Software.fxml"));
+			AnchorPane anchorPane2=loader1.load();
+			Scene scene2= new Scene(anchorPane2);
+			UsuarioController usuarioController = loader1.getController();
+			usuarioController.setAplication(this);
+
+			primaryStage.setScene(scene2);
+			primaryStage.show();
+
+			} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

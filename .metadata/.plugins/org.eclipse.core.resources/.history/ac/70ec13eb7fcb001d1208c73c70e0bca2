@@ -1,0 +1,13 @@
+package moduloSeguridad.Controller;
+
+import moduloSeguridad.Aplicacion;
+
+public class RecuperarContraseñaController {
+
+
+public void setAplication(Aplicacion aplicacion) {
+		
+		this.setAplication(aplicacion);
+		
+	}
+}

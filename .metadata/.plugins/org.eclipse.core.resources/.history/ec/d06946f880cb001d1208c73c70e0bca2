@@ -1,0 +1,46 @@
+package moduloSeguridad.Controller;
+
+import moduloSeguridad.Aplicacion;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+
+public class RegistroController {
+	
+	@FXML
+    private TextField correotxt;
+
+    @FXML
+    private TextField numeroCCtxt;
+
+    @FXML
+    private TextField nombretxt;
+
+    @FXML
+    private ComboBox<?> tipoDocumentoCB;
+
+    @FXML
+    private PasswordField contraseñatxt;
+
+    @FXML
+    private Button registrarbtn;
+
+    public void initialize(){
+
+    }
+
+    @FXML
+    void registro(ActionEvent event) {
+
+    }
+
+	public void setAplication(Aplicacion aplicacion) {
+		
+		this.setAplication(aplicacion);
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package moduloSeguridad.Controller;
+
+import moduloSeguridad.Aplicacion;
+import moduloSeguridadModel.Administrador;
+
+public class LoginController {
+	
+	private Aplicacion aplicacion=new Aplicacion();
+	private Administrador admin = new Administrador();
+
+}

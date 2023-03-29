@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="869.0" prefWidth="1243.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moduloSeguridad.Controller.RegistroController">
+   <children>
+      <Pane layoutX="590.0" prefHeight="869.0" prefWidth="653.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="108.0" layoutY="219.0" prefHeight="31.0" prefWidth="321.0" text="Nombre:" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nombretxt" layoutX="107.0" layoutY="250.0" prefHeight="31.0" prefWidth="467.0" />
+            <Button fx:id="registrarbtn" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="CENTER" depthTest="ENABLE" layoutX="275.0" layoutY="603.0" mnemonicParsing="false" onAction="#registro" prefHeight="31.0" prefWidth="131.0" style="-fx-background-radius: 20; -fx-background-color: #32a3a7;" text="Registrarte" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect></Button>
+            <BorderPane layoutX="466.0" layoutY="688.0" prefHeight="167.0" prefWidth="162.0">
+               <center>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../imagenes/logo-camu.png" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <Label alignment="CENTER" layoutX="148.0" layoutY="153.0" opacity="0.5" prefHeight="31.0" prefWidth="397.0" text="Es rápido y fácil." textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="120.0" layoutY="95.0" prefHeight="58.0" prefWidth="414.0" text="Crea una cuenta" textFill="#32a3a7" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri" size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="426.0" prefHeight="31.0" prefWidth="321.0" text="Contraseña:" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="contraseñatxt" layoutX="107.0" layoutY="457.0" prefHeight="31.0" prefWidth="467.0" />
+            <TextField fx:id="correotxt" layoutX="107.0" layoutY="527.0" prefHeight="31.0" prefWidth="467.0" />
+            <Label layoutX="108.0" layoutY="496.0" prefHeight="31.0" prefWidth="321.0" text="Correo:" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="288.0" prefHeight="31.0" prefWidth="321.0" text="Tipo de documento:" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="tipoDocumentoCB" layoutX="107.0" layoutY="319.0" prefHeight="31.0" prefWidth="245.0" />
+            <Label layoutX="108.0" layoutY="358.0" prefHeight="31.0" prefWidth="321.0" text="Número de identificacion:" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numeroCCtxt" layoutX="107.0" layoutY="389.0" prefHeight="31.0" prefWidth="467.0" />
+            <Button fx:id="volverbtn" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="CENTER" depthTest="ENABLE" layoutX="55.0" layoutY="772.0" mnemonicParsing="false" onAction="#volver" prefHeight="31.0" prefWidth="131.0" style="-fx-background-radius: 20; -fx-background-color: #32a3a7;" text="Volver" textAlignment="CENTER">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <BorderPane layoutX="-2.0" prefHeight="869.0" prefWidth="593.0" style="-fx-background-color: #247378;">
+         <center>
+            <ImageView fitHeight="277.0" fitWidth="529.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../imagenes/logo-camu-sticky-retina.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

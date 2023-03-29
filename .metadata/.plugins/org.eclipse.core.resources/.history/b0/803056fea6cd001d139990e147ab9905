@@ -1,0 +1,83 @@
+package moduloSeguridad.Controller;
+
+import moduloSeguridad.Aplicacion;
+import moduloSeguridad.Model.Usuario;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+
+import javax.mail.*;
+
+public class RegistroController {
+	
+	private Aplicacion aplicacion=new Aplicacion();
+	
+	ObservableList<String> tipoDocumento = FXCollections.observableArrayList();
+	
+	Usuario usuario = new Usuario("sebastian.sabogalg@uqvirtual.edu.co","1234");
+	
+	
+	
+	@FXML
+    private TextField correotxt;
+
+    @FXML
+    private TextField numeroCCtxt;
+
+    @FXML
+    private TextField nombretxt;
+
+    @FXML
+    private ComboBox<String> tipoDocumentoCB=new ComboBox<String>();
+   
+
+    @FXML
+    private PasswordField contraseñatxt;
+
+    @FXML
+    private Button registrarbtn;
+    
+    @FXML
+    private Button volverbtn;
+
+    public void initialize(){
+    	
+    	tipoDocumento.add("Cedula Ciudadania");
+    	tipoDocumento.add("Cedula Extranjera");
+    	
+    	tipoDocumentoCB.setItems(tipoDocumento);
+
+    }
+
+    @FXML
+    void registro(ActionEvent event) {
+
+    }
+    
+    @FXML
+    void volver(ActionEvent event) {
+
+		aplicacion.mostrarVentanaLogin();
+		
+    }
+    
+    @FXML
+    void enviar(ActionEvent event) {
+
+	
+		
+    }
+
+	public void setAplication(Aplicacion aplicacion) {
+		// TODO Auto-generated method stub
+		this.aplicacion =aplicacion;
+	}
+
+	
+
+}

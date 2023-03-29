@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.sun.glass.ui.Application"/>
+<fullyQualifiedTypeName name="moduloSeguridad.Controller.LoginController"/>
+<fullyQualifiedTypeName name="moduloSeguridad.Aplicacion"/>
+<fullyQualifiedTypeName name="javafx.application.Application"/>
+<fullyQualifiedTypeName name="moduloSeguridad.Controller.RegistroController"/>
+<fullyQualifiedTypeName name="moduloSeguridad.Controller.RecuperarContraseñaController"/>
+<fullyQualifiedTypeName name="javafx.scene.control.Hyperlink"/>
+<fullyQualifiedTypeName name="javafx.scene.control.TextField"/>
+<fullyQualifiedTypeName name="javafx.scene.control.Button"/>
+<fullyQualifiedTypeName name="javafx.fxml.FXML"/>
+<fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
+<fullyQualifiedTypeName name="javafx.scene.control.ComboBox"/>
+<fullyQualifiedTypeName name="moduloSeguridad.Model.Usuario"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="javax.mail.internet.MimeMessage"/>
+<fullyQualifiedTypeName name="javax.mail.internet.InternetAddress"/>
+</qualifiedTypeNameHistroy>

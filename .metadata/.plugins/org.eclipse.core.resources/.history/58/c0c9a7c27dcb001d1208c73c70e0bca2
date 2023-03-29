@@ -1,0 +1,12 @@
+package moduloSeguridad.Controller;
+
+import moduloSeguridad.Aplicacion;
+
+public class UsuarioController {
+
+	public void setAplication(Aplicacion aplicacion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

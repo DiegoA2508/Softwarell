@@ -1,0 +1,123 @@
+package moduloSeguridad.Controller;
+
+import moduloSeguridad.Aplicacion;
+import moduloSeguridad.Model.Usuario;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+
+import java.util.Properties;
+
+import javax.mail.*;
+import javax.mail.internet.MimeMessage;
+
+public class RegistroController {
+	
+	private Aplicacion aplicacion=new Aplicacion();
+	
+	ObservableList<String> tipoDocumento = FXCollections.observableArrayList();
+	
+	Usuario usuario = new Usuario("sebastian.sabogalg@uqvirtual.edu.co","1234");
+	
+	
+	
+	@FXML
+    private TextField correotxt;
+
+    @FXML
+    private TextField numeroCCtxt;
+
+    @FXML
+    private TextField nombretxt;
+
+    @FXML
+    private ComboBox<String> tipoDocumentoCB=new ComboBox<String>();
+   
+
+    @FXML
+    private PasswordField contraseñatxt;
+
+    @FXML
+    private Button registrarbtn;
+    
+    @FXML
+    private Button volverbtn;
+
+    public void initialize(){
+    	
+    	tipoDocumento.add("Cedula Ciudadania");
+    	tipoDocumento.add("Cedula Extranjera");
+    	
+    	tipoDocumentoCB.setItems(tipoDocumento);
+
+    }
+    
+    final String username = usuario.getCorreo();
+    final String password = usuario.getContraseña();
+
+    Properties props = new Properties();
+    props.put("mail.smtp.auth", "true");
+    props.put("mail.smtp.starttls.enable", "true");
+    props.put("mail.smtp.host", "smtp.gmail.com");
+    props.put("mail.smtp.port", "587");
+    
+    props.
+
+    Session session = Session.getInstance(props,
+    		new javax.mail.Authenticator() {
+    	protected PasswordAuthentication getPasswordAuthentication() {
+    		return new PasswordAuthentication(username, password);
+    	}
+    });
+
+//    try {
+//
+//    	Message message = new MimeMessage(session);
+//    	message.setFrom(new InternetAddress("tu-correo@gmail.com"));
+//    	message.setRecipients(Message.RecipientType.TO,
+//    			InternetAddress.parse("destinatario@gmail.com"));
+//    	message.setSubject("Recuperación de contraseña");
+//    	message.setText("Hola,\n\nPara recuperar tu contraseña, sigue este enlace: http://mi-sitio.com/recuperar-contraseña");
+//
+//    	Transport.send(message);
+//
+//    	System.out.println("El correo electrónico ha sido enviado con éxito.");
+//
+//    } catch (MessagingException e) {
+//    	throw new RuntimeException(e);
+//    	       }
+
+
+
+    @FXML
+    void registro(ActionEvent event) {
+
+    }
+    
+    @FXML
+    void volver(ActionEvent event) {
+
+		aplicacion.mostrarVentanaLogin();
+		
+    }
+    
+    @FXML
+    void enviar(ActionEvent event) {
+
+	
+		
+    }
+
+	public void setAplication(Aplicacion aplicacion) {
+		// TODO Auto-generated method stub
+		this.aplicacion =aplicacion;
+	}
+
+	
+
+}
